@@ -1,72 +1,74 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
 .open-sans-normal {
-  font-family: "Open Sans", serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
 
-/* shared styles */
-.text-center {
-  text-align: center;
-}
+/* shared style */
 .secondary-bg {
-  background-color: rgb(251, 248, 245);
+  background-color: #fff8f3;
 }
-
 .text-primary {
-  color: rgb(156, 156, 252);
+  color: #fd6e0a;
+}
+.dark-2 {
+  color: #474747;
 }
 
-.dark-2 {
-  color: rgb(87, 86, 86);
-}
 .btn-primary {
-  background-color: rgb(156, 156, 252);
+  background-color: #fd6e0a;
   font-weight: bold;
-  color: white;
   font-size: 20px;
+  color: white;
+  border: none;
   padding: 18px 35px;
   border-radius: 5px;
-  border: none;
 }
 
 .section-title {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
+  color: #181818;
 }
+
 .section-description {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;
+  color: #757575;
 }
-/* header */
+
+.text-center {
+  text-align: center;
+}
+/* header  */
 .header {
-  background-image: url(../images/developer.png), url(../images/header_bg.png);
+  background-image: url("../images/developer.png"),
+    url("../images/header_bg.png");
   background-repeat: no-repeat;
   background-position: top left, bottom right;
 }
 
-/* nav styles */
-
+/* Nav styles */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 50px 200px;
+  margin: 0 200px;
 }
 
 .nav-title {
   font-weight: 800;
   font-size: 45px;
 }
+
 nav ul {
   display: flex;
   align-items: center;
 }
+
 nav ul li {
   list-style: none;
-  margin: 50px;
+  margin-right: 50px;
 }
 
 nav li a {
@@ -75,7 +77,6 @@ nav li a {
 }
 
 /* banner styles */
-
 .banner {
   display: flex;
   justify-content: space-between;
@@ -90,27 +91,25 @@ nav li a {
 }
 
 .banner-title {
-  font-size: 60px;
-  font-weight: 700;
+  font-weight: bold;
+  font-size: 85px;
 }
-
 .banner-profile-pic {
   width: 580px;
 }
 
 /* main styles */
-
 main {
   max-width: 1140px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 main section {
-  margin-top: 120px;
+  margin-top: 130px;
   margin-bottom: 130px;
 }
 
-/* about section */
+/* about styles */
 .about {
   border-radius: 10px;
   padding: 130px 150px;
@@ -119,30 +118,91 @@ main section {
 .about-items {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
-}
-.item-title {
-  font-size: 20px;
-  font-weight: 600;
 }
 .item-description {
-  font-size: 17 px;
-  font-weight: 200;
+  font-weight: 600;
 }
 
 /* skills section styles */
-
 .skills-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
   gap: 24px;
 }
 
 .skill {
   padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+
+/* resume section styles */
+.resume-container {
+  display: flex;
+  gap: 24px;
+}
+.experience-sub-title {
   font-size: 20px;
-  font-weight: 300;
-  box-shadow: 0px 6px 50px 0px rgb(255, 242, 223);
-  margin-bottom: 120px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.experience-description,
+.experience-sub-title {
+  color: #757575;
+}
+.resume hr {
+  margin: 30px 5px;
+}
+
+.resume-download-cv {
+  margin-top: 50px;
+}
+
+/* footer styles */
+footer {
+  padding: 130px 230px;
+  display: flex;
+  gap: 100px;
+}
+.footer-column {
+  width: 50%;
+}
+
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
+  height: 64px;
+  border-radius: 5px;
+  background-color: white;
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 24px;
+  border: none;
+}
+
+/* responsive  media  query */
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .skills-container,
+  .resume-container,
+  footer,
+  .about-items {
+    flex-direction: column;
+  }
+  footer,
+  .about {
+    padding: 0px;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  footer input[type="text"],
+  footer input[type="email"],
+  footer textarea {
+    width: calc(100% - 40px);
+  }
 }
