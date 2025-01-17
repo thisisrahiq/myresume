@@ -182,16 +182,30 @@ footer textarea {
 
 /* responsive  media  query */
 
-.hide {
-  display: none;
-}
-
 @media screen and (max-width: 576px) {
+  .banner,
   .skills-container,
   .resume-container,
   footer,
-  .about-items {
+  .about-items,
+  nav,
+  nav ul {
     flex-direction: column;
+  }
+  nav ul {
+    gap: 10px;
+  }
+  .btn-primary {
+    margin-bottom: 20px;
+  }
+  .banner {
+    margin: 20px;
+  }
+  .banner-profile-pic {
+    width: 100%;
+  }
+  .header {
+    background-image: none;
   }
   footer,
   .about {
@@ -204,5 +218,11 @@ footer textarea {
   footer input[type="email"],
   footer textarea {
     width: calc(100% - 40px);
+  }
+}
+/* tablet specific responsive media query */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .banner {
+    flex-direction: column;
   }
 }
